@@ -34,6 +34,9 @@ function updatePlayers($players, $game) {
     foreach ($game->players() as $p) {
         $player = $players[$p->id()];
         $player->rating += $game->change($player);
+        if ($player->rating < MINIMUM_RATING) {
+            $player->rating = MINIMUM_RATING;
+        }
         $player->played += 1;
         if ($game->winner()->id() === $player->id()) {
             $player->streak += 1;

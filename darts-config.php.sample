@@ -1,6 +1,6 @@
 <?php
 
-define('LIVE', strpos($_SERVER['SERVER_NAME'], 'darts.bluebones.net'));
+define('LIVE', strpos($_SERVER['SERVER_NAME'], 'darts.bluebones.net') === 0);
 define('ROOT', LIVE ? '/srv/darts/src' : '/Users/bakert/darts/src');
 define('WWW_DIR', LIVE ? '' : '/darts');
 define('DB_USR', 'darts');

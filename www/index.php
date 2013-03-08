@@ -13,6 +13,7 @@ function main() {
 }
 
 function body() {
+    $s = '';
     $s .= '<h2>Standings</h2>';
     $s .= standingsTable(standings());
     $s .= '<h2>Games</h2>';

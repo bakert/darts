@@ -88,3 +88,27 @@ a.player, a.winner {
     color: #fff;
     padding: 1em;
 }
+@media only screen and (max-width: 480px) {
+    .row {
+        max-width: 100%;
+    }
+
+    /* Tables */
+    table thead tr th,
+    table thead tr td,
+    table tfoot tr th,
+    table tfoot tr td {
+        padding: 0;
+    }
+    table tr th,
+    table tr td {
+        padding: 0 5px;
+        font-size: 0.77em;
+    }
+    table .played, table .blank {
+        display: none;
+    }
+    .wl {
+        text-align: right;
+    }
+}

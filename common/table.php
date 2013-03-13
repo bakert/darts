@@ -10,10 +10,10 @@ function standingsTable($players) {
         . '<th class="span-20"></th>'
         . '<th class="span-25">Name</th>'
         . '<th class="span-5">Rating</th>'
-        . '<th class="span-5">Played</th>'
+        . '<th class="span-5 played">Played</th>'
         . '<th class="span-5">Streak</th>'
-        . '<th class="span-5">W-L</th>'
-        . '<th class="span-35"></th>'
+        . '<th class="span-15 wl">W-L</th>'
+        . '<th class="span-25 blank"></th>'
         . '</tr>';
     foreach ($players as $player) {
         $s .= standingsRow($player);
@@ -29,10 +29,10 @@ function standingsRow($player) {
     $s .= '<td><a class="player" data-id="' . q($player->id()) . '" href="#">'
         . q($player->name()) . '</a></td>';
     $s .= '<td class="n">' . q($player->rating) . '</td>';
-    $s .= '<td class="n">' . q($player->played) . '</td>';
+    $s .= '<td class="n played">' . q($player->played) . '</td>';
     $s .= '<td class="n">' . q($player->streak) . '</td>';
-    $s .= '<td class="n">' . q($player->wins) . '-' . q($player->losses) . '</td>';
-    $s .= '<td></td>';
+    $s .= '<td class="n wl">' . q($player->wins) . '-' . q($player->losses) . '</td>';
+    $s .= '<td class="blank"></td>';
     $s .= '</tr>';
     return $s;
 }

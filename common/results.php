@@ -40,8 +40,10 @@ function updatePlayers($players, $game) {
         $player->played += 1;
         if ($game->winner()->id() === $player->id()) {
             $player->streak += 1;
+            $player->wins++;
         } else {
             $player->streak = 0;
+            $player->losses++;
         }
     }
     return $players;

@@ -12,7 +12,8 @@ function standingsTable($players) {
         . '<th class="span-5">Rating</th>'
         . '<th class="span-5">Played</th>'
         . '<th class="span-5">Streak</th>'
-        . '<th class="span-40"></th>'
+        . '<th class="span-5">W-L</th>'
+        . '<th class="span-35"></th>'
         . '</tr>';
     foreach ($players as $player) {
         $s .= standingsRow($player);
@@ -30,6 +31,7 @@ function standingsRow($player) {
     $s .= '<td class="n">' . q($player->rating) . '</td>';
     $s .= '<td class="n">' . q($player->played) . '</td>';
     $s .= '<td class="n">' . q($player->streak) . '</td>';
+    $s .= '<td class="n">' . q($player->wins) . '-' . q($player->losses) . '</td>';
     $s .= '<td></td>';
     $s .= '</tr>';
     return $s;

@@ -7,12 +7,12 @@ function standingsTable($players) {
     $s = '<p>Click players\' names to add a result.</p>';
     $s .= '<table>';
     $s .= '<tr>'
-        . '<th class="span-20"></th>'
+        . '<th class="span-20 n"></th>'
         . '<th class="span-25">Name</th>'
-        . '<th class="span-5">Rating</th>'
-        . '<th class="span-5 played">Played</th>'
-        . '<th class="span-5">Streak</th>'
-        . '<th class="span-15 wl">W-L</th>'
+        . '<th class="span-5 n">Rating</th>'
+        . '<th class="span-5 n played">Played</th>'
+        . '<th class="span-5 n">Streak</th>'
+        . '<th class="span-15 n wl">W-L</th>'
         . '<th class="span-25 blank"></th>'
         . '</tr>';
     foreach ($players as $player) {

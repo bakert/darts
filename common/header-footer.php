@@ -7,6 +7,7 @@ function head($title = 'Darts') {
         <html lang="en">
             <head>
                 <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width" />
                 <title><?= q($title) ?></title>
                 <link rel="stylesheet" href="<?= u('/css/normalize.css') ?>">
                 <link rel="stylesheet" href="<?= u('/css/foundation.css') ?>">
